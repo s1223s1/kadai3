@@ -1,0 +1,14 @@
+<h1>Books</h1>
+	<%= form_for(@list, url:"/todolists/#{@list.id}") do |f| %>
+	<h4>Title</h4><h4>Body</h4><br>
+
+	<h2>New book</h2>
+
+	<h4>title</h4>
+	<%= f.text_field :title %>
+
+	<h4>Body</h4>
+	<%= f.text_area :body %>
+
+	<h4><%= f.submit 'Create Book' %><h4>
+	<% end %>
