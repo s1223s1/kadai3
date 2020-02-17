@@ -5,4 +5,5 @@
 <h4>Body:</h4>
 	<p><%= @list.body %></p>
 
-<%= link_to "Edit", edit_todolist_path(@list.id) %>
+<%= link_to "Edit", edit_todolist_path(@list.id) %> |
+<%= link_to 'Back', '/todolists/new' %>

@@ -1,9 +1,10 @@
-<h1>新規投稿</h1>
+<h2>Books</h2>
 <% @lists.each do |list| %>
-	<p>タイトル</p>
+	<p>Title</p>
 	<span>
 		<%=link_to list.title, todolist_path(list.id) %>
 	</span>
-	<p>画像</p>
-	<%= attachment_image_tag list, :image, :fill, 100, 100,format: 'jpeg' %>
+	<p>Body</p>
+	<span>
+		<%=link_to list.body, todolist_path(list.id) %>
 <% end %>
