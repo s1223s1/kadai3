@@ -1,4 +1,5 @@
-<br>
+<%= flash[:todolist_edit] %>
+<%= flash[:todolist] %>
 <h4>Title:</h4>
 <p><%= @list.title %></p>
 <br>
@@ -6,4 +7,4 @@
 	<p><%= @list.body %></p>
 
 <%= link_to "Edit", edit_todolist_path(@list.id) %> |
-<%= link_to 'Back', '/todolists/new' %>
+<%= link_to "Back", todolists_path %>
