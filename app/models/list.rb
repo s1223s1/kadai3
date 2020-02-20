@@ -1,3 +1,3 @@
-class List < ApplicationRecord
+class Book < ApplicationRecord
 	attachment :image
 end

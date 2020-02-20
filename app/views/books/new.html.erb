@@ -1,18 +1,18 @@
+<%= render 'layouts/error_messages', model: f.object %>
 <h1>Books</h1>
-	<%= form_for(@list, url:"/todolists/#{@list.id}") do |f| %>
-	<% @lists.each do |list| %>
+	<% @books.each do |book| %>
 	<p>Title</p>
 	<span>
-		<%=link_to list.title, todolist_path(list.id) %>
+		<%= book.title %>
 	</span>
 	<p>Body</p>
 	<span>
-		<%=link_to list.body, todolist_path(list.id) %>
+		<%= book.body %>
 	</span>
 	<% end %>
 
 	<h2>New book</h2>
-
+	<%=form_for(@book) do |f| %>
 	<h4>title</h4>
 	<%= f.text_field :title %>
 
