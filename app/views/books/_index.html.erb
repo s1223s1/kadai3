@@ -1,0 +1,29 @@
+<h2>User info</h2>
+<div>
+  <%= image_tag "a.png", alt: "a", id: "assets", class: "image", width: "150px" %>
+</div>
+<div class="profile-container">
+	<h3 class="profile-name"><%= @book.user_id %></h3>
+		<% if @book.user_id == current_user.id %>
+		<p><%= link_to "編集", edit_user_path,class: "pull-right" %></p>
+		<% end %>
+	</div>
+	<h2>New book</h2>
+	 <%= form_for @book, url: books_path do |f| %>
+	 <% if @book.errors.any? %>
+    <div class = "alert alert-warning">
+        <ul>
+            <% book.errors.full_messages.each do |book| %>
+                <li><%= book %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+	<h4>title</h4>
+	<%= f.text_field :title %>
+
+	<h4>Opinion</h4>
+	<%= f.text_area :body %>
+
+	<h4><%= f.submit 'Create Book' %><h4>
+	<% end %>

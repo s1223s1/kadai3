@@ -1,4 +1,5 @@
 <%= render 'layouts/error_messages', model: f.object %>
+<%= render 'books/index', books: @books %>
 <h1>Books</h1>
 	<% @books.each do |book| %>
 	<p>Title</p>

@@ -1,3 +1,10 @@
+<%= render 'books/index', books: @books %>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-4">
+		</div>
+		<div class="col-lg-8">
+<table class="table table-striped">
 <h1>Editing Book</h1>
 <%= form_for(@book, url:"/books/#{@book.id}") do |f| %>
 	<h4>Title</h4>
@@ -9,3 +16,7 @@
 <% end %>
 	<%= link_to "Show",  book_path(@book.id) %> |
 	<%= link_to "Back",  books_path %>
+</table>
+</div>
+</div>
+</div>
